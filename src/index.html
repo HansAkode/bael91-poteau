@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./output.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js">
+    </script>
+</head>
+
+
+<body class="
+        grid
+        grid-cols-[9.5fr_40fr_1fr_40fr_9.5fr]
+        grid-rows-[max-content_minmax(0,1fr)_1000px_max-content]
+        min-h-screen
+    ">
+
+
+    <div class="col-start-2 col-end-5 row-start-2">
+     
+                <div id="entetePage" data-include="../pages/entetedesPages.html"></div>
+    </div>
+
+    <div class="
+            col-start-2
+            row-start-3
+            min-h-0
+            overflow-hidden
+            rounded-2xl
+            bg-gray-200
+            p-1
+        ">
+
+        <div class="
+                flex
+                h-full
+                min-h-0
+                flex-col
+                overflow-hidden
+                rounded-2xl
+                bg-white
+                px-4
+                py-11
+            ">
+
+            <div class="
+                    min-h-0
+                    flex-1
+                    overflow-y-auto
+                    scrollbar-none
+                ">
+
+                <div id="plageDonnees" data-include="../pages/pageDonnees.html"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="
+            col-start-4
+            row-start-3
+            min-h-0
+            overflow-hidden
+            rounded-2xl
+            bg-gray-200
+            p-2
+        " style="container-type: inline-size">
+        <div class="
+                relative
+                h-full
+                min-h-0
+                w-full
+            ">
+            <div class="
+                    absolute
+                    inset-0
+                    min-h-0
+                    overflow-hidden
+                    rounded-xl
+                    bg-white
+                    px-4
+                    py-10
+                " style="
+                    clip-path: polygon(
+                        0 0,
+                        92cqw 0,
+                        100% 8cqw,
+                        100% 100%,
+                        0 100%
+                    );
+                ">
+                <div class="
+                        h-full
+                        min-h-0
+                        overflow-y-auto
+                        scrollbar-none
+                    ">
+
+                    <div id="plageResultats" data-include="../pages/pageResultats.html"></div>
+
+                </div>
+
+            </div>
+
+            <div class="
+                    absolute
+                    inset-0
+                    pointer-events-none
+                    bg-gray-300
+                " style="
+                    clip-path: polygon(
+                        92cqw 0,
+                        100% 8cqw,
+                        92cqw 8cqw
+                    );
+                "></div>
+
+        </div>
+
+    </div>
+
+    <div class="col-start-2 col-end-5 row-start-4">
+        footer
+    </div>
+
+
+    <script type="module" src="../scripts/main.js"></script>
+
+</body>
+
+</html>

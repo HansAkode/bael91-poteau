@@ -1,0 +1,121 @@
+<div class="flex flex-col">
+    <div class="flex flex-row items-center gap-2 py-1 px-[5%] bg-[#31487a] ">
+        <h1 class="w-5 h-5 rounded-md flex justify-center items-center bg-[#8fb3e2] text-white">1</h1>
+        <h1 class="text-white font-bold">GÉNÉRALITÉ</h1>
+    </div>
+
+    <div class="flex flex-col gap-2 border-gray-300 pt-2 pb-4 px-[5%]">
+
+
+        <div class="grid grid-cols-[35%_max-content] items-center">
+            <h2 class="pr-6">Nu est connu ?</h2>
+            <select id="nuEtat" class="border border-gray-300 rounded-md p-1">
+                <option value="connu">Oui</option>
+                <option value="inconnu">Non</option>
+            </select>
+        </div>
+
+        <div class="grid grid-cols-[35%_max-content] items-center">
+            <h2 class="pr-6">Type de section</h2>
+            <select id="typeSection" class="border border-gray-300 rounded-md p-1">
+                <option value="re">Rectangulaire</option>
+                <option value="ca">Carrée</option>
+                <option value="ci">Circulaire</option>
+            </select>
+        </div>
+
+        <div class="grid grid-cols-[35%_max-content] items-center">
+            <h2 class="pr-6">Condition d'appuies</h2>
+            <select id="encastrement" class="border border-gray-300 rounded-md p-1">
+                <option value="simpleEncastre">Uniquement encastré en pied</option>
+                <option value="doubleArticule">Articulé en tête et articulé en pied</option>
+                <option value="articuleEncastre">Articulé en tête et encastré en pied</option>
+                <option value="encastreArticule">Encastré en tête et articulé en pied</option>
+                <option value="doubleEncastre">Encastré en tête et encastré en pied</option>
+                <option value="etagesMultiples">Bâtiment à étages multiples</option>
+            </select>
+        </div>
+
+
+
+    </div>
+
+    <div class="blocSollicitations">
+
+        <div class="flex flex-row items-center gap-2 py-1 px-[5%] bg-[#31487a] rounded-tr-xl">
+            <h1 class="w-5 h-5 rounded-md flex justify-center items-center bg-[#8fb3e2] text-white">2</h1>
+            <h1 class="text-white font-bold">SOLLICITATIONS</h1>
+        </div>
+
+        <div data-include="../components/enteteData.html"></div>
+
+        <div id="nuConnuBrut" class="flex flex-col gap-2 border-gray-300 pt-2 pb-4">
+            <div data-gridname="nUConnuValeur" data-titre="Effort normal Nu" data-titreunite="force"></div>
+        </div>
+
+        <div id="nuInconnuBrut" data-include="../components/nuInconnu.html"></div>
+
+        <div class="grid grid-cols-[5%_40%_50%_5%] items-center">
+            <h2 class="col-start-2">Le poteau est voisin</h2>
+            <select id="coefficientAlpha" class="col-start-3 ml-3 border border-gray-300 rounded-md p-1">
+                <option value="pRive">c'est un poteau de rive</option>
+                <option value="voisin1pRive">de 1 seul poteau de rive</option>
+                <option value="voisinPlusDe1pRive">d'au moins 2 poteaux de rive</option>
+            </select>
+        </div>
+        <div class="grid grid-cols-[5%_40%_50%_5%] items-center pt-2 pb-4">
+            <h2 class="col-start-2">Plus de la moitié des charges</h2>
+            <select id="coefficientAlpha" class="col-start-3 ml-3 border border-gray-300 rounded-md p-1">
+                <option value="sup90j">appliquée après 90 jours</option>
+                <option value="entre28jEt90j">appliquée avant 90 jours</option>
+                <option value="entre28jEt90j">appliquée entre 28 et 90 jours</option>
+                <option value="inf28j">appliquée avant 28 jours</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="blocGeometrie grid grid-rows-[max-content_max-content_max-content] my-4">
+
+        <div class="flex flex-row items-center gap-2 py-1 px-[5%] bg-[#31487a] rounded-tr-xl">
+            <h1 class="w-5 h-5 rounded-md flex justify-center items-center bg-[#8fb3e2] text-white">3</h1>
+            <h1 class="text-white font-bold">GÉOMÉTRIE</h1>
+        </div>
+
+        <div data-include="../components/enteteData.html"></div>
+        <div class="flex flex-col pt-2 pb-4">
+
+            <div id="rectangulaire" class="flex flex-col gap-2">
+                <div data-gridname="md" data-titre="Longueur de la coupe (b)" data-titreunite="longueur"></div>
+                <div data-gridname="dml" data-titre="Largeur de la coupe (a)" data-titreunite="longueur"></div>
+            </div>
+            <div id="carrer" class="flex flex-col gap-2">
+
+                <div data-gridname="ds" data-titre="Côté de la coupe (c)" data-titreunite="longueur"></div>
+            </div>
+
+            <div id="circulaire" class="flex flex-col gap-2">
+
+                <div data-gridname="dq" data-titre="Diamètre de la coupe (D)" data-titreunite="longueur"></div>
+            </div>
+
+            <div data-include="../components/formulaireGeometrie.html" class="flex flex-col pt-2 gap-2"></div>
+        </div>
+
+    </div>
+
+    <div class="blocMateriaux grid grid-rows-[max-content_max-content_max-content]">
+        <div class="flex flex-row items-center gap-2 py-1 px-[5%] bg-[#31487a] rounded-tr-xl">
+            <h1 class="w-5 h-5 rounded-md flex justify-center items-center bg-[#8fb3e2] text-white">4</h1>
+            <h1 class="text-white font-bold">MATÉRIAUX</h1>
+        </div>
+
+        <div data-include="../components/enteteData.html"></div>
+
+        <div data-include="../components/formulaireMateriaux.html" class="flex flex-col pt-2 pb-4 gap-2"></div>
+
+    </div>
+
+
+
+</div>
