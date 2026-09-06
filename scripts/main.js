@@ -15,9 +15,12 @@ async function main() {
 
     await initialiserNuTypeView();
     await initialiserGeometrieTypeView();
-    await afficherToutesFormules();
+    
     await ajouterToutesLesBarres();
     await chargerToutesLesUnites();
+    
+    await afficherToutesFormules();
+    
     console.log("✅ Application prête");
 }
 

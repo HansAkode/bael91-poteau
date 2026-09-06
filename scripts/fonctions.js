@@ -1,6 +1,8 @@
 
 import { Valeurs } from "./valeurs.js";
 
+import { afficherToutesFormules } from "./formulesPoteauLast.js";
+
 export async function uniteType(typeDonnees) {
     const typeUnite = typeDonnees.dataset.typeunites;
     console.log("page trouver ");

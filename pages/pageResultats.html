@@ -3,32 +3,143 @@
         <h1 class="text-white font-bold">I- ARMATURE LONGITUDINALE</h1>
     </div>
 
-    <div class="flex flex-col px-[4%] pt-4">
+    <div class="flex flex-col px-[2%] pt-2 gap-2">
         <div class=" w-max grid grid-cols-[max-content_max-content]">
             <div class="pr-1 ">1.</div>
-            <h2 class="underline underline-offset-[1.5px] italic">Vérifier la condition du non flambement :</h2>
+            <h2 class="underline underline-offset-[1.5px] italic">Vérification de la condition du non flambement</h2>
+        </div>
+        <div class="px-[2.5%] flex flex-col gap-2">
+
+
+            <div class="flex flex-row gap-1 items-center">
+                <h3 class="text-sm">La longueur de flambement vaut : </h3>
+
+                <div id="longueurFlambement"></div>
+                <h3 class="text-sm">avec</h3>
+                <div id="resultatk"></div>
+                </h2>
+            </div>
+
+            <div id="lambdaRectangulaire"></div>
+            <div id="lambdaCirculaire"></div>
+
+            <div id="resultatlambdaRectangulaire"></div>
+            <div id="resultatlambdaCirculaire"></div>
+
+            <div class="flex flex-row gap-1 items-center">
+                <h3 class="text-sm">On remarque que : </h3>
+
+                <div id="conditionLambda70"></div>
+                <div id="resultatconditionLambda70"></div>
+
+                <h3 class="text-sm">avec</h3>
+                <h3 class="text-sm">avec</h3>
+            </div>
+
+
         </div>
 
-        <h3 class="text-sm py-2">Calcul de la longueur de flambement :</h3>
+
+
+        <div class=" w-max grid grid-cols-[max-content_max-content]">
+            <div class="pr-1 ">2.</div>
+            <h2 class="underline underline-offset-[1.5px] italic">Calcul du coefficient de flambage</h2>
+        </div>
+
+        <div class="px-[2.5%] flex flex-col gap-2">
+
+
+            <div class="flex flex-row gap-1 items-center">
+                <h3 class="text-sm">On remarque que : </h3>
+
+                <div id="conditionLambda50"></div>
+                <div id="resultatconditionLambda50"></div>
+
+                <h3 class="text-sm">avec</h3>
+                <h3 class="text-sm">avec</h3>
+            </div>
+            
+
+            <div id="alphaLambdaInferieur50"></div>
+            
+            <div id="alphaLambdaSuperieur50"></div>
+
+            <div id="resultatalphaLambdaInferieur50"></div>
+            
+            <div id="resultatalphaLambdaSuperieur50"></div>
+
+            
+            <div class="flex flex-row gap-1 items-center">
+                <h3 class="text-sm">Sachant que : </h3>
+
+                <div id="conditionLambda50"></div>
+                <div id="resultatconditionLambda50"></div>
+
+                <h3 class="text-sm">sans</h3>
+                <h3 class="text-sm">avec</h3>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class=" w-max grid grid-cols-[max-content_max-content]">
+            <div class="pr-1 ">3.</div>
+            <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section réduite de béton</h2>
+        </div>
+        
+        <div class="px-[2.5%] flex flex-col gap-2">
+
+            
+        </div>
+
+
+
+
+        <div class=" w-max grid grid-cols-[max-content_max-content]">
+            <div class="pr-1 ">4.</div>
+            <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section d'acier théorique</h2>
+        </div>
+
+        <div class=" w-max grid grid-cols-[max-content_max-content]">
+            <div class="pr-1 ">5.</div>
+            <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section d'acier minimale</h2>
+        </div>
+
+        <div class=" w-max grid grid-cols-[max-content_max-content]">
+            <div class="pr-1 ">6.</div>
+            <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section d'acier finale</h2>
+        </div>
+
+        <h2 class="italic">Vérifications</h2>
+
+        <h2 class="">Choix des armatures Longitudinales</h2>
+
+
+        <h3 class="text-sm">Calcul de la longueur de flambement :</h3>
+
         <div class=" w-max grid grid-cols-[max-content_max-content]">
             <div class="pr-1 ">1.</div>
             <h2 class="underline underline-offset-[1.5px] italic">Vérifier la condition du non flambement :</h2>
         </div>
         <div id="longueurFlambement" class="text-sm p-0 m-0"></div>
+
+
+        <div id="effortNormalNu"></div>
+        <div id="resultateffortNormalNu"></div>
+
     </div>
 
 
     <div class="flex flex-col">
-        <div id="effortNormalNu"></div>
-        <div id="resultateffortNormalNu"></div>
-        
+
 
         <div id="combinaisonNu"></div>
 
         <div id="longueurFlambement"></div>
 
-        <div id="lambdaRectangulaire"></div>
-        <div id="lambdaCirculaire"></div>
         <div id="conditionLambda70"></div>
         <div id="conditionLambda50"></div>
 
