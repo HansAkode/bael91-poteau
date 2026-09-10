@@ -43,7 +43,40 @@ export function initialiserNuTypeView() {
     select.addEventListener("change", mettreAJour);
 }
 
+export function initialiserGeometrieTypeView() {
+    const choixSection = document.getElementById("typeSection");
+    const typeAffichable = document.querySelectorAll("[data-sectionaspect]");
 
+    if (!choixSection) {
+        console.error("typeSection introuvable");
+        return;
+    }
+
+    if (choixSection.value === "default") {
+
+        typeAffichable.forEach((element) => {
+            element.classList.add("invisible");
+        });
+    }
+
+    choixSection?.addEventListener("change", () => {
+        const sectionSelectionnee = choixSection.value;
+
+        for (const element of typeAffichable) {
+
+            const sections = element.dataset.sectionaspect.split(" ");
+
+            if (sections.includes(sectionSelectionnee)) {
+                element.classList.remove("invisible");
+            } else {
+                element.classList.add("invisible");
+            }
+        }
+
+    });
+}
+
+/*
 export function initialiserGeometrieTypeView() {
 
     const select = document.getElementById("typeSection");
@@ -101,3 +134,4 @@ export function initialiserGeometrieTypeView() {
     // Surveille les changements
     select.addEventListener("change", mettreAJour);
 }
+*/

@@ -1,9 +1,6 @@
 <div class="flex flex-col">
-    <div class="flex flex-row w-max items-center gap-2 py-1 px-[5%] bg-[#31487a] ">
-        <h1 class="text-white font-bold">I- ARMATURE LONGITUDINALE</h1>
-    </div>
 
-    <div class="flex flex-col px-[2%] pt-2 gap-2">
+    <div class="flex flex-col px-[2%]  gap-2">
         <div class=" w-max grid grid-cols-[max-content_max-content]">
             <div class="pr-1 ">1.</div>
             <h2 class="underline underline-offset-[1.5px] italic">Vérification de la condition du non flambement</h2>
@@ -16,24 +13,28 @@
 
                 <div id="longueurFlambement"></div>
                 <h3 class="text-sm">avec</h3>
-                <div id="resultatk"></div>
+                <div id="k"></div>
                 </h2>
             </div>
 
-            <div id="lambdaRectangulaire"></div>
-            <div id="lambdaCirculaire"></div>
+            <div class="grid">
+                <div id="lambdaCarrer" data-section="ca" class="col-start-1 row-start-1"></div>                
+                <div id="lambdaRectangulaire" data-section="re" class="col-start-1 row-start-1"></div>
+                <div id="lambdaCirculaire" data-section="ci" class="col-start-1 row-start-1"></div>
 
-            <div id="resultatlambdaRectangulaire"></div>
-            <div id="resultatlambdaCirculaire"></div>
+                <div id="resultatlambdaCarrer" data-section="ca" class="col-start-1 row-start-2"></div>                
+                <div id="resultatlambdaRectangulaire" data-section="re" class="col-start-1 row-start-2"></div>
+                <div id="resultatlambdaCirculaire" data-section="ci" class="col-start-1 row-start-2"></div>
+            </div>
 
             <div class="flex flex-row gap-1 items-center">
-                <h3 class="text-sm">On remarque que : </h3>
+                <h3 class="text-sm">On remarque que </h3>
 
-                <div id="conditionLambda70"></div>
+                <div id="conditionLambda70" data-condition="lambdaInf70"></div>
                 <div id="resultatconditionLambda70"></div>
 
-                <h3 class="text-sm">avec</h3>
-                <h3 class="text-sm">avec</h3>
+                <h3 class="text-sm">alors il s'agit d'une flexion composée</h3>
+                <h3 class="text-sm">alors c'est une flexion simple et l'organigramme s'applique.</h3>
             </div>
 
 
@@ -50,33 +51,39 @@
 
 
             <div class="flex flex-row gap-1 items-center">
-                <h3 class="text-sm">On remarque que : </h3>
+                <h3 class="text-sm">On remarque que </h3>
 
                 <div id="conditionLambda50"></div>
                 <div id="resultatconditionLambda50"></div>
 
-                <h3 class="text-sm">avec</h3>
-                <h3 class="text-sm">avec</h3>
+                <h3 class="text-sm">alors :</h3>
             </div>
-            
 
-            <div id="alphaLambdaInferieur50"></div>
-            
-            <div id="alphaLambdaSuperieur50"></div>
+            <div class="grid">
 
-            <div id="resultatalphaLambdaInferieur50"></div>
-            
-            <div id="resultatalphaLambdaSuperieur50"></div>
+                <div id="alphaLambdaInferieur50" class="col-start-1 row-start-1"></div>
 
-            
-            <div class="flex flex-row gap-1 items-center">
+                <div id="alphaLambdaSuperieur50" class="col-start-1 row-start-1"></div>
+
+                <div id="resultatalphaLambdaInferieur50" class="col-start-1 row-start-2"></div>
+
+                <div id="resultatalphaLambdaSuperieur50" class="col-start-1 row-start-2"></div>
+            </div>
+
+
+            <div class="flex flex-row gap-2 items-center">
                 <h3 class="text-sm">Sachant que : </h3>
-
-                <div id="conditionLambda50"></div>
-                <div id="resultatconditionLambda50"></div>
-
-                <h3 class="text-sm">sans</h3>
-                <h3 class="text-sm">avec</h3>
+                <div class="grid">
+                    <div id="alphaApres90Jours" data-choixcharges="sup90j" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="alphaAvant90Jours" data-choixcharges="entre28jEt90j" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="alphaAvant28Jours" data-choixcharges="inf28j" class="col-start-1 row-start-1 w-max"></div>
+                </div>
+                <h3 class="text-sm">soit</h3>
+                <div class="grid">
+                    <div id="resultatalphaApres90Jours" data-choixcharges="sup90j" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="resultatalphaAvant90Jours" data-choixcharges="entre28jEt90j" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="resultatalphaAvant28Jours" data-choixcharges="inf28j" class="col-start-1 row-start-1 w-max"></div>
+                </div>
             </div>
 
         </div>
@@ -89,10 +96,18 @@
             <div class="pr-1 ">3.</div>
             <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section réduite de béton</h2>
         </div>
-        
-        <div class="px-[2.5%] flex flex-col gap-2">
 
-            
+        <div class="px-[2.5%] flex flex-col gap-2">
+            <div class="grid">
+                <div id="BrRectangulaire" data-section="re" class="col-start-1 row-start-1"></div>
+                <div id="BrCarrer" data-section="ca" class="col-start-1 row-start-1"></div>
+                <div id="BrCirculaire" data-section="ci" class="col-start-1 row-start-1"></div>
+                
+                <div id="resultatBrRectangulaire" data-section="re" class="col-start-1 row-start-2"></div>
+                <div id="resultatBrCarrer" data-section="ca" class="col-start-1 row-start-2"></div>
+                <div id="resultatBrCirculaire" data-section="ci" class="col-start-1 row-start-2"></div>
+            </div>
+
         </div>
 
 
@@ -103,17 +118,139 @@
             <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section d'acier théorique</h2>
         </div>
 
+        <div class="px-[2.5%] flex flex-col gap-2">
+            <div id="Ath"></div>
+            <div id="resultatAth"></div>
+        </div>
+
+
         <div class=" w-max grid grid-cols-[max-content_max-content]">
             <div class="pr-1 ">5.</div>
             <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section d'acier minimale</h2>
         </div>
+
+
+        <div class="px-[2.5%] flex flex-col gap-2">
+
+
+            <div class="flex flex-row gap-2 items-center">
+                <h3 class="text-sm">Le périmètre u vaut :</h3>
+                <div class="grid">
+                    <div id="perimetreURectangle" data-section="re" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="perimetreUCarrer" data-section="ca" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="perimetreUCirculaire" data-section="ci" class="col-start-1 row-start-1 w-max"></div>
+                </div>
+
+
+                <h3 class="text-sm">soit</h3>
+                <div class="grid">
+
+                    <div id="resultatperimetreURectangle" data-section="re" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="resultatperimetreUCarrer" data-section="ca" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="resultatperimetreUCirculaire" data-section="ci" class="col-start-1 row-start-1 w-max">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-row gap-2 items-center">
+                <h3 class="text-sm">La section B vaut :</h3>
+                <div class="grid">
+
+                    <div id="BRectangulaire" data-section="re" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="BCarrer" data-section="ca" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="BCirculaire" data-section="ci" class="col-start-1 row-start-1 w-max"></div>
+                </div>
+
+                <h3 class="text-sm">soit</h3>
+                <div class="grid">
+
+                    <div id="resultatBRectangulaire" data-section="re" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="resultatBCarrer" data-section="ca" class="col-start-1 row-start-1 w-max"></div>
+                    <div id="resultatBCirculaire" data-section="ci" class="col-start-1 row-start-1 w-max"></div>
+                </div>
+
+            </div>
+
+
+            <h3 class="text-sm pt-2">Alors :</h3>
+
+
+            <div class="flex flex-row gap-1 items-center">
+                <div id="A4u"></div>
+                <h3 class="text-sm">soit</h3>
+                <div id="resultatA4u"></div>
+            </div>
+
+            <div class="flex flex-row gap-2 items-center">
+                <div id="A02Pourcent"></div>
+                <h3 class="text-sm">soit</h3>
+                <div id="resultatA02Pourcent"></div>
+            </div>
+
+
+            <h3 class="text-sm pt-2">Soit :</h3>
+
+
+            <div id="Amin"></div>
+
+
+            <div id="resultatAmin"></div>
+        </div>
+
 
         <div class=" w-max grid grid-cols-[max-content_max-content]">
             <div class="pr-1 ">6.</div>
             <h2 class="underline underline-offset-[1.5px] italic">Calcul de la section d'acier finale</h2>
         </div>
 
+        <div class="px-[2.5%] flex flex-col gap-2">
+            <div id="Asc"></div>
+            <div id="resultatAsc"></div>
+        </div>
+
         <h2 class="italic">Vérifications</h2>
+
+        <div class="px-[2.5%] flex flex-col gap-2">
+
+            <div class="flex flex-row gap-1 items-center">
+
+                <h3 class="text-sm">On a </h3>
+                <div id="A5Pourcent"></div>
+
+                <h3 class="text-sm">soit :</h3>
+                <div id="resultatA5Pourcent"></div>
+            </div>
+
+            <div class="flex flex-row gap-1 items-center">
+                <h3 class="text-sm">On a :</h3>
+                <div id="verif02PourcentInf"></div>
+                <div id="resultatverif02PourcentInf"></div>
+
+                <h3 class="text-sm">et</h3>
+                <div id="verif05PourcentInf"></div>
+                <div id="resultatverif05PourcentInf"></div>
+
+            </div>
+
+            <div id="limiteAsc"></div>
+            <div id="resultatlimiteAsc"></div>
+        </div>
+
+        <div class="flex flex-row gap-1 items-center">
+            <h3 class="text-sm">On choisit :</h3>
+            <div id="valeurDesBarres"></div>
+
+            <h3 class="text-sm">totalisant</h3>
+            <div id="valeurDeSection"></div>
+
+        </div>
+
+
+
+
+
+
+
 
         <h2 class="">Choix des armatures Longitudinales</h2>
 
@@ -131,46 +268,5 @@
         <div id="resultateffortNormalNu"></div>
 
     </div>
-
-
-    <div class="flex flex-col">
-
-
-        <div id="combinaisonNu"></div>
-
-        <div id="longueurFlambement"></div>
-
-        <div id="conditionLambda70"></div>
-        <div id="conditionLambda50"></div>
-
-        <div id="alphaLambdaInferieur50"></div>
-        <div id="alphaLambdaSuperieur50"></div>
-
-        <div id="alphaApres90Jours"></div>
-        <div id="alphaAvant90Jours"></div>
-        <div id="alphaAvant28Jours"></div>
-
-        <div id="BrRectangulaire"></div>
-        <div id="BrCirculaire"></div>
-
-        <div id="Ath"></div>
-
-        <div id="A4u"></div>
-        <div id="A02Pourcent"></div>
-        <div id="Amin"></div>
-        <div id="Asc"></div>
-
-        <div id="limiteAsc"></div>
-
-        <div id="diametreCadres"></div>
-        <div id="espacementCadres"></div>
-        <div id="nombreCours"></div>
-
-        <div id="gammaB"></div>
-        <div id="gammaS"></div>
-
-        <div id="conversionMNKN"></div>
-    </div>
-
 
 </div>

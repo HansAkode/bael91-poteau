@@ -18,6 +18,7 @@
         <div class="grid grid-cols-[35%_max-content] items-center">
             <h2 class="pr-6">Type de section</h2>
             <select id="typeSection" class="border border-gray-300 rounded-md p-1">
+                <option value="default" selected>Choisissez...</option>
                 <option value="re">Rectangulaire</option>
                 <option value="ca">Carrée</option>
                 <option value="ci">Circulaire</option>
@@ -27,6 +28,7 @@
         <div class="grid grid-cols-[35%_max-content] items-center">
             <h2 class="pr-6">Condition d'appuies</h2>
             <select id="encastrement" class="border border-gray-300 rounded-md p-1">
+                <option value="default" selected>Choisissez...</option>
                 <option value="simpleEncastre">Uniquement encastré en pied</option>
                 <option value="doubleArticule">Articulé en tête et articulé en pied</option>
                 <option value="articuleEncastre">Articulé en tête et encastré en pied</option>
@@ -50,14 +52,14 @@
         <div data-include="../components/enteteData.html"></div>
 
         <div id="nuConnuBrut" class="flex flex-col gap-2 border-gray-300 pt-2 pb-4">
-            <div data-gridname="nUConnuValeur" data-titre="Effort normal Nu" data-titreunite="force"></div>
+            <div data-gridname="nUConnu" data-titre="Effort normal Nu" data-titreunite="force"></div>
         </div>
 
         <div id="nuInconnuBrut" data-include="../components/nuInconnu.html"></div>
 
         <div class="grid grid-cols-[5%_40%_50%_5%] items-center">
             <h2 class="col-start-2">Le poteau est voisin</h2>
-            <select id="coefficientAlpha" class="col-start-3 ml-3 border border-gray-300 rounded-md p-1">
+            <select id="positionPoteau" class="col-start-3 ml-3 border border-gray-300 rounded-md p-1">
                 <option value="pRive">c'est un poteau de rive</option>
                 <option value="voisin1pRive">de 1 seul poteau de rive</option>
                 <option value="voisinPlusDe1pRive">d'au moins 2 poteaux de rive</option>
@@ -66,9 +68,9 @@
         <div class="grid grid-cols-[5%_40%_50%_5%] items-center pt-2 pb-4">
             <h2 class="col-start-2">Plus de la moitié des charges</h2>
             <select id="coefficientAlpha" class="col-start-3 ml-3 border border-gray-300 rounded-md p-1">
+                <option value="default" selected>Choisissez...</option>
                 <option value="sup90j">appliquée après 90 jours</option>
                 <option value="entre28jEt90j">appliquée avant 90 jours</option>
-                <option value="entre28jEt90j">appliquée entre 28 et 90 jours</option>
                 <option value="inf28j">appliquée avant 28 jours</option>
             </select>
         </div>
@@ -85,18 +87,21 @@
         <div data-include="../components/enteteData.html"></div>
         <div class="flex flex-col pt-2 pb-4">
 
-            <div id="rectangulaire" class="flex flex-col gap-2">
-                <div data-gridname="md" data-titre="Longueur de la coupe (b)" data-titreunite="longueur"></div>
-                <div data-gridname="dml" data-titre="Largeur de la coupe (a)" data-titreunite="longueur"></div>
-            </div>
-            <div id="carrer" class="flex flex-col gap-2">
+            <div class="grid">
 
-                <div data-gridname="ds" data-titre="Côté de la coupe (c)" data-titreunite="longueur"></div>
-            </div>
+                <div data-sectionaspect="re" data-gridname="b" data-titre="Longueur de la coupe (b)"
+                    data-titreunite="longueur" class="col-start-1 row-start-2"></div>
 
-            <div id="circulaire" class="flex flex-col gap-2">
+                <div data-sectionaspect="re" data-gridname="a" data-titre="Largeur de la coupe (a)"
+                    data-titreunite="longueur" class="col-start-1 row-start-1 my-2"></div>
 
-                <div data-gridname="dq" data-titre="Diamètre de la coupe (D)" data-titreunite="longueur"></div>
+
+                <div data-sectionaspect="ca" data-gridname="c" data-titre="Côté de la coupe (c)"
+                    data-titreunite="longueur" class="col-start-1 row-start-1"></div>
+
+
+                <div data-sectionaspect="ci" data-gridname="d" data-titre="Diamètre de la coupe (D)"
+                    data-titreunite="longueur" class="col-start-1 row-start-1"></div>
             </div>
 
             <div data-include="../components/formulaireGeometrie.html" class="flex flex-col pt-2 gap-2"></div>

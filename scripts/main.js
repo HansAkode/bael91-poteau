@@ -3,7 +3,11 @@ import { initialiserNuTypeView } from "./nuTypeView.js";
 import { initialiserGeometrieTypeView } from "./nuTypeView.js";
 import { chargerToutesLesUnites } from "./fonctions.js";
 import { ajouterToutesLesBarres } from "./fonctions.js";
-import {afficherToutesFormules} from "./formulesPoteauLast.js";
+import { afficherToutesFormules } from "./formulesPoteau.js";
+import { valeurDeK } from "./affichageVariables.js";
+import { dureeDesCharges } from "./affichageVariables.js";
+import { visibiliteParSection } from "./affichageVariables.js";
+
 
 async function main() {
 
@@ -13,13 +17,16 @@ async function main() {
     console.log("📄 HTML complètement chargé");
 
 
-    await initialiserNuTypeView();
-    await initialiserGeometrieTypeView();
-    
+    initialiserNuTypeView();
+    initialiserGeometrieTypeView();
+
     await ajouterToutesLesBarres();
     await chargerToutesLesUnites();
-    
-    await afficherToutesFormules();
+
+    afficherToutesFormules();
+    valeurDeK();
+    dureeDesCharges();
+    visibiliteParSection();
     
     console.log("✅ Application prête");
 }

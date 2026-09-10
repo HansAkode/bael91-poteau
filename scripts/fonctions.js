@@ -1,7 +1,7 @@
 
 import { Valeurs } from "./valeurs.js";
 
-import { afficherToutesFormules } from "./formulesPoteauLast.js";
+import { afficherToutesFormules } from "./formulesPoteau.js";
 
 export async function uniteType(typeDonnees) {
     const typeUnite = typeDonnees.dataset.typeunites;
